@@ -95,13 +95,13 @@ output "public_endpoint_subnet_id" {
   value       = try(module.endpoint_subnet.subnet_id, null)
 }
 
-output "public_node_pools_subnet" {
-  description = "Public subnets"
+output "private_node_pools_subnet" {
+  description = "Private node pools subnet"
   value       = try(module.node_pools_subnet.subnet, null)
 }
 
-output "public_node_pools_subnet_id" {
-  description = "Public subnets ID"
+output "private_node_pools_subnet_id" {
+  description = "Private node pools subnet ID"
   value       = try(module.node_pools_subnet.subnet_id, null)
 }
 
@@ -109,40 +109,40 @@ output "public_node_pools_subnet_id" {
 #--------------Security List----------------#
 output "sec_list_all_eggres" {
   description = "Security list all eggress"
-  value       = try(module.create_all_eggres.security_list, null)
+  value = try(module.create_all_eggres.security_list, null)
 }
 
 output "sec_list_all_eggres_id" {
   description = "Security list all eggress ID"
-  value       = try(module.create_all_eggres.security_list_id, null)
+  value = try(module.create_all_eggres.security_list_id, null)
 }
 
 output "sec_list_endpoint" {
   description = "Security list endpoint"
-  value       = try(module.create_sec_list_endpoint.security_list, null)
+  value = try(module.create_sec_list_endpoint.security_list, null)
 }
 
 output "sec_list_endpoint_id" {
   description = "Security list endpoint ID"
-  value       = try(module.create_sec_list_endpoint.security_list_id, null)
+  value = try(module.create_sec_list_endpoint.security_list_id, null)
 }
 
 output "sec_list_service_lb" {
   description = "Security list service lb"
-  value       = try(module.sec_list_service_lb.security_list, null)
+  value = try(module.sec_list_service_lb.security_list, null)
 }
 
 output "sec_list_service_lb_id" {
   description = "Security list service lb ID"
-  value       = try(module.sec_list_service_lb.security_list_id, null)
+  value = try(module.sec_list_service_lb.security_list_id, null)
 }
 
 output "sec_list_nodes" {
   description = "Security list nodes"
-  value       = try(module.create_sec_list_nodes.security_list, null)
+  value = try(module.create_sec_list_nodes.security_list, null)
 }
 
 output "sec_list_nodes_id" {
   description = "Security list nodes ID"
-  value       = try(module.create_sec_list_nodes.security_list_id, null)
+  value = try(module.create_sec_list_nodes.security_list_id, null)
 }

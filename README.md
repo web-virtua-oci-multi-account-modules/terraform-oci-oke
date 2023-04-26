@@ -298,8 +298,8 @@ variable "node_pools" {
 | `public_service_lb_subnet_id` | Public subnets ID |
 | `public_endpoint_subnet` | Public endpoint subnets |
 | `public_endpoint_subnet_id` | Public endpoint subnets ID |
-| `private_node_pools_subnet` | Private node pools subn |
-| `private_node_pools_subnet_id` | Private node pools subnets ID |
+| `private_node_pools_subnet` | Private node pools subnet |
+| `private_node_pools_subnet_id` | Private node pools subnet ID |
 | `sec_list_all_eggres` | Security list all eggress |
 | `sec_list_all_eggres_id` | Security list all eggress ID |
 | `sec_list_endpoint` | Security list endpoint |
