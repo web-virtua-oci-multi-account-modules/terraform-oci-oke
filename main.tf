@@ -101,7 +101,7 @@ resource "oci_containerengine_node_pool" "create_oke_node_pools" {
   name                = each.value.name
   kubernetes_version  = try(each.value.kubernetes_version, var.kubernetes_version)
   node_shape          = each.value.node_shape
-  ssh_public_key      = each.value.ssh_public_key
+  ssh_public_key      = each.value.ssh_public_key != null ? each.value.ssh_public_key : var.ssh_keys_all_nodes
   node_metadata       = each.value.node_metadata
   quantity_per_subnet = each.value.quantity_per_subnet
   subnet_ids          = each.value.subnet_ids

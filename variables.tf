@@ -153,6 +153,12 @@ variable "image_policy_config" {
   default = null
 }
 
+variable "ssh_keys_all_nodes" {
+  description = "String with keys SSH for all nodes that not set ssh public key, one per line"
+  type        = string
+  default     = null
+}
+
 variable "node_pools" {
   description = "Node pools configuration, the placement_subnet_id variable require one subnet, but isn't allowed use same subnet used on service_lb or endpoint subnet"
   type = list(object({

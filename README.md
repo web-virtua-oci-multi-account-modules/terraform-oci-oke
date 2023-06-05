@@ -154,6 +154,7 @@ module "oke_test" {
 | image_policy_config | `list(object)` | `null` | no | Image verification policy for signature validation, for is_policy_enabled if true, the image verification policy is enabled to verify, for kms_key_id the image verification policy is enabled to verify | `-` |
 | node_pools | `list(object)` | `[]` | no | Node pools configuration, the placement_subnet_id variable require one subnet, but isn't allowed use same subnet used on service_lb or endpoint subnet | `-` |
 | cidr_blocks | `list(object)` | `object` | no | CIDR block to create network if necessary | `-` |
+| ssh_keys_all_nodes | `string` | `null` | no | String with keys SSH for all nodes that not set ssh public key, one per line | `-` |
 
 
 * Default cidr_blocks variable
